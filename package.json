@@ -8,7 +8,8 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "mcp": "npx @playwright/mcp"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -72,6 +73,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
+    "@playwright/mcp": "^0.0.68",
     "@playwright/test": "^1.58.0",
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^22.16.5",

@@ -157,4 +157,24 @@ Landing → Configurador → Checkout → Análise de Crédito → Confirmação
 npm run dev      # Desenvolvimento
 npm run build    # Build de produção
 npm run lint     # Verificar código
+yarn run mcp     # Iniciar servidor Model Context Protocol (MCP) do Playwright
 ```
+
+---
+
+## Integração de IA (Playwright MCP)
+
+Este projeto possui o servidor oficial do **Playwright MCP** (`@playwright/mcp`) pré-configurado para permitir que assistentes de IA (como Claude ou Cursor) possam controlar e testar o sistema diretamente no navegador:
+
+- **Como iniciar manualmente:** `yarn run mcp` ou `npx @playwright/mcp`
+- **Cursor IDE:** Adicione em "MCP Servers" no Cursor a seguinte configuração (tipo `command`):
+  `npx @playwright/mcp`
+- **Claude Desktop:** Adicione ao seu arquivo de configuração (ex: `claude_desktop_config.json`):
+  ```json
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp"]
+    }
+  }
+  ```
